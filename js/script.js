@@ -1,4 +1,5 @@
-console.log("Exercises 1")
+console.log("Exercises 1");
+console.log("\n");
 // Exercises 1
 
 function getAngle(firtsAngle, secondAngle) {
@@ -16,11 +17,11 @@ console.log(getAngle(75, 25));
 
 // Exercises 2
 
-console.log("\n")
-console.log("Exercises 2")
-console.log("\n")
+console.log("\n");
+console.log("Exercises 2");
+console.log("\n");
 
-function exercises2(firstValue) {
+function sumOfN(firstValue) {
     let result, secondValue, thirdValue;
     for (let i = 0; i <= firstValue; i++) {
         secondValue = firstValue + firstValue;
@@ -31,17 +32,17 @@ function exercises2(firstValue) {
     return result;
 }
 
-console.log(exercises2(3));
-console.log(exercises2(17));
-console.log(exercises2(100));
+console.log(sumOfN(3));
+console.log(sumOfN(17));
+console.log(sumOfN(100));
 
 
 
 // Exercises 3
 
-console.log("\n")
-console.log("Exercises 3")
-console.log("\n")
+console.log("\n");
+console.log("Exercises 3");
+console.log("\n");
 
 function getRemainder(firstValue, secondValue) {
     if ((firstValue % secondValue === 0 ) || (secondValue % firstValue === 0)) {
@@ -58,14 +59,14 @@ console.log(getRemainder(7,21));
 
 // Exercises 4
 
-console.log("\n")
-console.log("Exercises 4")
-console.log("\n")
+console.log("\n");
+console.log("Exercises 4");
+console.log("\n");
 
 function getAverage(firstValue, secondValue, thirdValue, fourthValue, fifthValue) {
     let result = (firstValue + secondValue + thirdValue + fourthValue + fifthValue) / 5;
 
-    return result
+    return result;
 }
 
 console.log(getAverage(45, -12, 0, 3, -15));
@@ -74,19 +75,22 @@ console.log(getAverage(7, 52, -23, 9, -81));
 
 // Exercises 5
 
-console.log("\n")
-console.log("Exercises 5")
-console.log("\n")
+console.log("\n");
+console.log("Exercises 5");
+console.log("\n");
 
 function changeNumber(value) {
-    let result;
-    let valueLastNumeral = value % 10;
+    let stringValue = String(value);
+    let result = stringValue[stringValue.length - 1];
 
-    if  (valueLastNumeral) {
-        result = Number(valueLastNumeral + String((value - valueLastNumeral) / 10));
+    if  (Number(result) !== 0) {
+        for (let i = 0; i < stringValue.length - 1; i++) {
+            result += stringValue[i];
+        }
     } else result = value;
 
-    return result
+    result = Number(result);
+    return result;
 }
 
 console.log(changeNumber(367));
