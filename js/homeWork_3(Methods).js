@@ -1,4 +1,3 @@
-// homeWork__2
 
 // Exercises 1
 console.log("Exercises 1");
