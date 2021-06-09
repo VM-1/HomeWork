@@ -5,7 +5,7 @@ console.log("\n");
 
 
 function filter(array, func, startIndex = 0) {
-  if (array.length > 1) {
+  if (array.length > 0) {
     let result = [];
     for (let i = startIndex; i < array.length; i++) {
       if (func(array[i])) {
